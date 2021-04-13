@@ -34,6 +34,18 @@ class Dealar(Person):
         print(self.dice_deck)
 
 
+class Dice:
+    dice_list = ['1_D','1_D','4_A','4_A','2_S','3_K']
+    def __init__(self):
+        pass
+    def roll_dice(self):
+        self.result = []
+        for _ in range(5):
+            self.result.append(random.choice(Dice.dice_list))
+        self.result = sorted(self.result)
+        # print(dice1.result)
+        return self.result
+
 class Table():
 
     def __init__(self):
